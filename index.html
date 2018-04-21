@@ -118,7 +118,23 @@ ctx:fillRect(0, 0, flag_w, flag_h)
 ctx.fillStyle='rgb(0, 0, 150)'
 ctx:fillRect(0, 0, flag_w*2/5, flag_h*7/13)
 
+ctx.fillStyle='rgb(255, 255, 255)'
+ctx:fillRect(240, 300*1/13, flag_w*3/5, flag_h*1/13)
 
+ctx.fillStyle='rgb(255, 255, 255)'
+ctx:fillRect(240, 300*3/13, flag_w*3/5, flag_h*1/13)
+
+ctx.fillStyle='rgb(255, 255, 255)'
+ctx:fillRect(240, 300*5/13, flag_w*3/5, flag_h*1/13)
+
+ctx.fillStyle='rgb(255, 255, 255)'
+ctx:fillRect(0, 300*7/13, flag_w, flag_h*1/13)
+
+ctx.fillStyle='rgb(255, 255, 255)'
+ctx:fillRect(0, 300*9/13, flag_w, flag_h*1/13)
+
+ctx.fillStyle='rgb(255, 255, 255)'
+ctx:fillRect(0, 300*11/13, flag_w, flag_h*1/13)
 
 -- 準備在 canvas 中繪圖
 function draw_line(x1, y1, x2, y2, color)
@@ -191,6 +207,6 @@ end
     
     for i = 0, 4 do
     for j = 0, 3 do
-        star(32+42*i,30+35*j, 9, 35, true, "#fff")
+        star(33+42*i,28+35*j, 9, 35, true, "#fff")
     end
 end
