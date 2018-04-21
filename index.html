@@ -102,7 +102,22 @@ local document = global.document
 -- 準備繪圖畫布
 local canvas = document:getElementById("canvas")
 -- 將 ctx 設為 canvas 2d 繪圖畫布變數
-ctx = canvas:getContext("2d")
+local ctx = canvas:getContext("2d")
+
+-- 以下採用 canvas 原始座標繪圖
+flag_w = 600
+flag_h = 300
+circle_x = flag_w/4
+circle_y = flag_h/4
+
+-- 先畫滿地紅
+ctx.fillStyle='rgb(255, 0, 0)'
+ctx:fillRect(0, 0, flag_w, flag_h)
+
+-- 再畫青天
+ctx.fillStyle='rgb(0, 0, 150)'
+ctx:fillRect(0, 0, flag_w*2/5, flag_h*7/13)
+
 
 
 -- 準備在 canvas 中繪圖
@@ -170,12 +185,12 @@ end
 --star(300, 300, 50, 0, false, "#000")
 for i = 0, 5 do
     for j = 0, 4 do
-        star(100+35*i, 100+35*j, 7, 35, true, "#fff")
+        star(13+42*i, 11+35*j, 9, 35, true, "#fff")
     end
 end
     
     for i = 0, 4 do
     for j = 0, 3 do
-        star(120+35*i, 120+35*j, 7, 35, true, "#fff")
+        star(32+42*i,30+35*j, 9, 35, true, "#fff")
     end
 end
